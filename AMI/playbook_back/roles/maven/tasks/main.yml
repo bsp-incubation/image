@@ -5,6 +5,3 @@
     dest: /home/ec2-user
     remote_src: yes
 
-- name: Update path for maven use
-  become: yes
-  command: export PATH=/home/ec2-user/apache-maven-3.6.3/bin:$PATH
