@@ -27,8 +27,18 @@
       {
         "type": "ansible",
         
-        "playbook_file": "/var/lib/jenkins/workspace/AMI_self/AMI/playbook_back/back.yml"
+        "playbook_file": "/var/lib/jenkins/workspace/back_ami/AMI/playbook_back/back.yml" 
       }
+    ],
+	  "post-processors": [
+    {
+      "type": "manifest",
+      "output": "/var/lib/jenkins/workspace/back_ami/AMI/packer/ami_var/api/apibuild.json",
+      "strip_path": true,
+      "custom_data": {
+        "my_custom_data": "API AMI"
+      }
+    }
     ]
   }
   

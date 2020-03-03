@@ -27,8 +27,18 @@
       {
         "type": "ansible",
         
-        "playbook_file": "/var/lib/jenkins/workspace/AMI_self/AMI/playbook_front/front.yml"
+        "playbook_file": "/var/lib/jenkins/workspace/front_ami/AMI/playbook_front/front.yml" 
       }
+    ],
+	  "post-processors": [
+    {
+      "type": "manifest",
+      "output": "/var/lib/jenkins/workspace/front_ami/AMI/packer/ami_var/ui/uibuild.json",
+      "strip_path": true,
+      "custom_data": {
+        "my_custom_data": "UI AMI"
+      }
+    }
     ]
   }
   
