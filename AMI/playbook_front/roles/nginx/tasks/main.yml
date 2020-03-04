@@ -1,8 +1,0 @@
-# nginx 설치
-- name: install nginx and modules in Linux
-  become: yes
-  yum: 
-    pkg: nginx 
-    state: latest
-  notify:
-    - Start Nginx
