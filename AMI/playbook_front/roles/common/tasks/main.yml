@@ -18,6 +18,13 @@
     name: git
     state: latest
 
+# Ruby 설치
+- name: install ruby
+  become: yes
+  yum:
+    name: ruby
+    state: latest
+
 # 서버시간 동기화
 - name: remove unused yum packages -ntp
   become: yes

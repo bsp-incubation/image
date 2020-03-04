@@ -14,6 +14,13 @@
     name: git
     state: latest
 
+# Ruby 설치
+- name: install ruby
+  become: yes
+  yum:
+    name: ruby
+    state: latest
+
 - name: remove unused yum packages -ntp
   become: yes
   yum:
