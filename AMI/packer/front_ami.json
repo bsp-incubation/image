@@ -4,7 +4,7 @@
       "aws_ami_name": "UI-ami {{timestamp}}",
       "aws_access_key" : "{{env 'access_key'}}",
       "aws_secret_key" : "{{env 'secret_key'}}",
-      "aws_source_ami" : "ami-0ecd78c22823e02ef",
+      "aws_source_ami" : "ami-0a93a08544874b3b7",
       "aws_ssh_username" : "ec2-user"
     },
     "builders": [
