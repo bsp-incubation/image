@@ -1,7 +1,7 @@
 {
     "_comment": "Back AMI using Amazon Linux",
     "variables": {
-      "ami_name": "Back-base-ami {{timestamp}}",
+      "aws_ami_name": "API-ami",
       "aws_access_key" : "{{env 'access_key'}}",
       "aws_secret_key" : "{{env 'secret_key'}}",
       "aws_source_ami" : "ami-0ecd78c22823e02ef",
@@ -16,10 +16,12 @@
         "source_ami": "{{user `aws_source_ami`}}",
         "instance_type": "t2.micro",
         "ssh_username": "{{user `aws_ssh_username`}}",
-        "ami_name": "{{user `ami_name`}}",
+        "ami_name": "{{user `aws_ami_name`}}",
         "ami_description": "Back with Amazon Linux",
         "tags": { 
-          "Name": "{{user `ami_name`}}"
+          "Name": "{{user `aws_ami_name`}}",
+          "BaseAMI_Id": "{{ .SourceAMI }}",
+          "BaseAMI_Name": "{{ .SourceAMIName }}"
         }
       }
     ],
@@ -27,18 +29,8 @@
       {
         "type": "ansible",
         
-        "playbook_file": "/var/lib/jenkins/workspace/back_ami/AMI/playbook_back/back.yml" 
+        "playbook_file": "/var/lib/jenkins/workspace/Back_ami/AMI/playbook_back/back.yml" 
       }
-    ],
-	  "post-processors": [
-    {
-      "type": "manifest",
-      "output": "/var/lib/jenkins/workspace/back_ami/AMI/packer/ami_var/api/apibuild.json",
-      "strip_path": true,
-      "custom_data": {
-        "my_custom_data": "API AMI"
-      }
-    }
     ]
   }
   

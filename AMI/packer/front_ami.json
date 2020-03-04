@@ -1,7 +1,7 @@
 {
     "_comment": "Front AMI using Amazon Linux",
     "variables": {
-      "ami_name": "Front-base-ami {{timestamp}}",
+      "aws_ami_name": "UI-ami",
       "aws_access_key" : "{{env 'access_key'}}",
       "aws_secret_key" : "{{env 'secret_key'}}",
       "aws_source_ami" : "ami-0ecd78c22823e02ef",
@@ -16,10 +16,12 @@
         "source_ami": "{{user `aws_source_ami`}}",
         "instance_type": "t2.micro",
         "ssh_username": "{{user `aws_ssh_username`}}",
-        "ami_name": "{{user `ami_name`}}",
+        "ami_name": "{{user `aws_ami_name`}}",
         "ami_description": "Front with Amazon Linux",
         "tags": { 
-          "Name": "{{user `ami_name`}}"
+          "Name": "{{user `aws_ami_name`}}",
+          "BaseAMI_Id": "{{ .SourceAMI }}",
+          "BaseAMI_Name": "{{ .SourceAMIName }}"
         }
       }
     ],
@@ -27,18 +29,8 @@
       {
         "type": "ansible",
         
-        "playbook_file": "/var/lib/jenkins/workspace/front_ami/AMI/playbook_front/front.yml" 
+        "playbook_file": "/var/lib/jenkins/workspace/Front_ami/AMI/playbook_front/front.yml" 
       }
-    ],
-	  "post-processors": [
-    {
-      "type": "manifest",
-      "output": "/var/lib/jenkins/workspace/front_ami/AMI/packer/ami_var/ui/uibuild.json",
-      "strip_path": true,
-      "custom_data": {
-        "my_custom_data": "UI AMI"
-      }
-    }
     ]
   }
   
