@@ -1,7 +1,7 @@
 {
     "_comment": "Front AMI using Amazon Linux",
     "variables": {
-      "aws_ami_name": "UI-ami",
+      "aws_ami_name": "UI-ami {{timestamp}}",
       "aws_access_key" : "{{env 'access_key'}}",
       "aws_secret_key" : "{{env 'secret_key'}}",
       "aws_source_ami" : "ami-0ecd78c22823e02ef",
