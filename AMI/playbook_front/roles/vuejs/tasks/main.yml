@@ -21,3 +21,9 @@
   npm:
     name: "vue-cli"
     global: true
+
+- name: install webpack
+  become: yes
+  npm: 
+    name: webpack --save-dev
+    global: true
