@@ -3,4 +3,5 @@
   roles:
     - common
     - vuejs
+    - ansible-git
     - codeDeploy

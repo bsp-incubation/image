@@ -21,14 +21,3 @@
   npm:
     name: "vue-cli"
     global: true
-
-- name: install webpack
-  become: yes
-  shell: | 
-    npm init -y
-    
-    npm install -g webpack --save-dev
-
-    npm install webpack-cli
-
-    npm install -D
