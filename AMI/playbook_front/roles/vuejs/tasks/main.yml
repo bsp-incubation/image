@@ -24,4 +24,11 @@
 
 - name: install webpack
   become: yes
-  shell: npm install webpack --save-dev
+  shell: | 
+    npm init -y
+    
+    npm install -g webpack --save-dev
+
+    npm install webpack-cli
+
+    npm install -D
