@@ -29,15 +29,19 @@
 #     repo: https://github.com/ju0731/automation.git
 #     dest: /
 
-- name: install webpack
-  become: yes
-  shell: | 
-    npm init -y
+# - name: install webpack
+#   become: yes
+#   shell: | 
+#     npm init -y
 
-    npm install -g webpack --save-dev
+#     npm install -g webpack --save-dev
 
-    npm install -g webpack-cli
+#     npm install -g webpack-cli
 
-    npm install -g -D
+#     npm install -g -D
   # args:
   #   chdir: /home/ec2-user/automation/
+
+- name: install webpack
+  become: yes
+  shell: npm install webpack --save-dev
