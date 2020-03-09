@@ -22,13 +22,12 @@
     name: "vue-cli"
     global: true
 
+    
 - name: pull from git
   become: yes
   git:
     repo: https://github.com/ju0731/automation.git
-    dest: /home/ec2-user/
 
-    
 - name: install webpack
   become: yes
   shell: | 
