@@ -26,7 +26,7 @@
   become: yes
   git:
     repo: https://github.com/ju0731/automation.git
-    dest: /home/ec2-user
+    dest: /home/ec2-user/
 
     
 - name: install webpack
@@ -40,4 +40,4 @@
 
     npm install -D
   args:
-    chdir: /home/ec2-user/automation
+    chdir: /home/ec2-user/automation/
