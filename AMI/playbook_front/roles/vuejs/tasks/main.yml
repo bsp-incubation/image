@@ -24,6 +24,4 @@
 
 - name: install webpack
   become: yes
-  npm: 
-    name: webpack
-    global: true
+  shell: npm install webpack --save-dev
