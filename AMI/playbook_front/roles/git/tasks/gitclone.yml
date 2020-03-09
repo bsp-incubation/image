@@ -1,4 +1,4 @@
-- name: pull the latest code from git
+- name: pull from git
   become: yes
   git:
     repo: https://github.com/ju0731/automation.git
