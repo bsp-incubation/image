@@ -23,20 +23,21 @@
     global: true
 
     
-- name: pull from git
-  become: yes
-  git:
-    repo: https://github.com/ju0731/automation.git
+# - name: pull from git
+#   become: yes
+#   git:
+#     repo: https://github.com/ju0731/automation.git
+#     dest: /
 
 - name: install webpack
   become: yes
   shell: | 
     npm init -y
 
-    npm install webpack --save-dev
+    npm install -g webpack --save-dev
 
-    npm install webpack-cli
+    npm install -g webpack-cli
 
-    npm install -D
-  args:
-    chdir: /home/ec2-user/automation/
+    npm install -g -D
+  # args:
+  #   chdir: /home/ec2-user/automation/
