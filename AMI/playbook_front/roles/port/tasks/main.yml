@@ -6,6 +6,7 @@
     jump: ACCEPT
     action: insert
     rule_num: 1
+  become: yes
 
 - name: 80 output
   iptables:
@@ -15,6 +16,7 @@
     jump: ACCEPT
     action: insert
     rule_num: 2
+  become: yes
 
 - name: 8080input
   iptables:
