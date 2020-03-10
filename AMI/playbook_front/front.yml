@@ -3,6 +3,6 @@
   roles:
     - common
     - vuejs
-    - git
-    - codeDeploy
     - port
+    - codeDeploy
+    

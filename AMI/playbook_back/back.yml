@@ -4,5 +4,6 @@
     - common
     - jdk8
     - maven
-    - codeDeploy
     - port
+    - codeDeploy
+    
