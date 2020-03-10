@@ -15,7 +15,7 @@
     destination_port: 80
     jump: ACCEPT
     action: insert
-    rule_num: 2
+    rule_num: 1
   become: yes
 
 - name: 8080input
