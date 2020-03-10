@@ -3,6 +3,7 @@
   roles:
     - common
     - vuejs
+    - webpack
     - port
     - codeDeploy
     

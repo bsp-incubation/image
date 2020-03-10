@@ -1,0 +1,21 @@
+- name: Clone a repository
+  git:
+    repo: https://github.com/ju0731/automation.git
+    version: master
+    dest: /home/ec2-user
+  become: yes
+
+- name: install webpack
+  shell: | 
+    npm init -y
+
+    npm install webpack --save-dev
+
+    npm install webpack-cli
+
+    npm install -D
+  args:
+    chdir: /home/ec2-user/automation
+    warn: false
+  become: yes  
+
