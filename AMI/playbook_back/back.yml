@@ -5,3 +5,4 @@
     - jdk8
     - maven
     - codeDeploy
+    - port
