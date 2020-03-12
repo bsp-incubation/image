@@ -1,0 +1,10 @@
+{
+    "provisioners": [
+      {
+        "type": "ansible",
+        
+        "playbook_file": "/var/lib/jenkins/workspace/back_ami/AMI/playbook_back/back.yml" 
+      }
+    ]
+  }
+  

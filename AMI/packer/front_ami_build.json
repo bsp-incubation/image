@@ -24,13 +24,6 @@
           "BaseAMI_Name": "{{ .SourceAMIName }}"
         }
       }
-    ],
-    "provisioners": [
-      {
-        "type": "ansible",
-        
-        "playbook_file": "/var/lib/jenkins/workspace/front_ami/AMI/playbook_front/front.yml" 
-      }
     ]
   }
   
