@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Git clone') {
       steps {
-        sh 'cd /'
+        git(url: 'https://github.com/bsp-incubation/image.git', branch: 'master')
       }
     }
 
