@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Git clone') {
       steps {
-        sh 'cd /var/lib'
+        sh 'cd /'
       }
     }
 
