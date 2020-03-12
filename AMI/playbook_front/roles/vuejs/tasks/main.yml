@@ -21,3 +21,18 @@
   npm:
     name: "vue-cli"
     global: true
+
+- name: Install bootstrap
+  become: yes
+  npm:
+    name: "{{ item }}"
+    state: 
+  with_items:
+    - bootstrap
+    - bootstrap-vue
+    - @fortawesome/fontawesome-svg-core
+    - @fortawesome/free-solid-svg-icons
+    - @fortawesome/vue-fontawesome
+    - axios
+    - vuex
+    - vee-validate@2.2.15
