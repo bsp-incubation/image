@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Git clone') {
       steps {
-        sh '''cd /var/lib/jenkins/workspace/back_ami
-git pull remote origin'''
+        sh 'cd /var/lib'
       }
     }
 
