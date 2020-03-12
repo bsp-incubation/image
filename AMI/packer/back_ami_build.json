@@ -24,6 +24,13 @@
           "BaseAMI_Name": "{{ .SourceAMIName }}"
         }
       }
+    ],
+    "provisioners": [
+      {
+        "type": "ansible",
+        
+        "playbook_file": "/var/lib/jenkins/workspace/back_ami_master/AMI/playbook_back/back.yml" 
+      }
     ]
   }
   
