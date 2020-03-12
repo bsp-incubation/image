@@ -30,9 +30,9 @@
   with_items:
     - bootstrap
     - bootstrap-vue
-    - @fortawesome/fontawesome-svg-core
-    - @fortawesome/free-solid-svg-icons
-    - @fortawesome/vue-fontawesome
+    - fortawesome/fontawesome-svg-core
+    - fortawesome/free-solid-svg-icons
+    - fortawesome/vue-fontawesome
     - axios
     - vuex
     - vee-validate@2.2.15
