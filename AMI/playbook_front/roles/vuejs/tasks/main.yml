@@ -24,15 +24,14 @@
 
 - name: Install bootstrap
   become: yes
-  npm:
-    name: "{{ item }}"
-    state: present
-  with_items:
-    - bootstrap
-    - bootstrap-vue
-    - fortawesome/fontawesome-svg-core
-    - fortawesome/free-solid-svg-icons
-    - fortawesome/vue-fontawesome
-    - axios
-    - vuex
-    - vee-validate@2.2.15
+  shell: |
+    npm --save install bootstrap-vue
+    npm --save install bootstrap
+    npm --save install @fortawesome/fontawesome-svg-core
+    npm --save install @fortawesome/free-solid-svg-icons
+    npm --save install @fortawesome/vue-fontawesome
+    npm --save install axios
+    npm --save install vuex
+    npm install --save vee-validate@2.2.15
+  args:
+    warn: false
