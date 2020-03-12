@@ -3,11 +3,6 @@
     list: updates 
     update_cache: true
 
-- name: set Asia/Seoul timezone
-  become: yes
-  timezone:
-    name: Asia/Seoul
-
 - name: install git
   become: yes
   yum:
@@ -20,6 +15,11 @@
   yum:
     name: ruby
     state: latest
+
+- name: set Asia/Seoul timezone
+  become: yes
+  timezone:
+    name: Asia/Seoul
 
 - name: remove unused yum packages -ntp
   become: yes
