@@ -14,12 +14,5 @@ pipeline {
       }
     }
 
-    stage('Provisioning') {
-      steps {
-        sh '''cd /var/lib
-./packer build -var-file=/var/lib/jenkins/workspace/var.json /var/lib/jenkins/workspace/back_ami_master/AMI/packer/back_ami_prov.json'''
-      }
-    }
-
   }
 }
