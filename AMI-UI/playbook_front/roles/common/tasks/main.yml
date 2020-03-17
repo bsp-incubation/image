@@ -19,6 +19,13 @@
     name: ruby
     state: latest
 
+# jq 설치
+- name: install jq
+  become: yes
+  yum:
+    name: jq
+    state: latest
+
 # timezone 설정
 - name: set Asia/Seoul timezone
   become: yes
