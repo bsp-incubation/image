@@ -2,7 +2,7 @@
   hosts: all
   roles:
     - common
-    - vuejs
-    - iptables
-    - codeDeploy
+    # - vuejs
+    # - iptables
+    # - codeDeploy
     
