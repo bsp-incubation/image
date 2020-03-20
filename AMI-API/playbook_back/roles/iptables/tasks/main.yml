@@ -8,6 +8,8 @@
     rule_num: 1
   become: yes
 
+  # iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
+
 - name: 80 output
   iptables:
     chain: OUTPUT
@@ -18,7 +20,9 @@
     rule_num: 1
   become: yes
 
-- name: 8080input
+  # iptables -I OUTPUT 1 -p tcp	--dport 80 -j ACCEPT
+
+- name: 8080 to 80
   iptables:
     chain: PREROUTING
     protocol: tcp
@@ -28,3 +32,5 @@
     table: nat
     action: append
   become: yes
+
+  # sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
